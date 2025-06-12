@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – SLECHTHART</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <header>
+        <h1><a href="index.html" class="logo">🖤 SLECHTHART</a></h1>
+        <nav class="navbar">
+          <div class="nav-links">
+            <a href="kontakt.html">Kontakt</a>
+            <a href="rueckgabe.html">Rückgabe</a>
+            <a href="versand.html">Versand</a>
+            <a href="warenkorb.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+            <button id="toggle-theme" aria-label="Toggle Dark/Light Mode">🌙</button>
+          </div>
+        </nav>
+      </header>
+      
+
+  <main class="container">
+    <h2>Kontaktformular</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Dein Name" />
+
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="email" required placeholder="dein@email.de" />
+
+      <label for="message">Nachricht</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Deine Nachricht"></textarea>
+
+      <button type="submit" class="btn">Absenden</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 SLECHTHART. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

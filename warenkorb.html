@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Warenkorb</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .warenkorb-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+
+    .warenkorb-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .btn-entfernen {
+      background-color: crimson;
+      color: white;
+      border: none;
+      padding: 0.4rem 0.7rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Dein Warenkorb</h2>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+    </div>
+  </nav>
+  
+  <div id="warenkorb-inhalt"></div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('warenkorb-inhalt');
+
+    function renderCart() {
+      if (cart.length === 0) {
+        container.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
+        return;
+      }
+
+      let html = "";
+      let summe = 0;
+
+      cart.forEach((item, index) => {
+        html += `
+          <div class="warenkorb-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div>
+              <p><strong>${item.name}</strong></p>
+              <p>${item.price.toFixed(2)} €</p>
+              <button class="btn-entfernen" onclick="removeItem(${index})">Entfernen</button>
+            </div>
+          </div>
+        `;
+        summe += item.price;
+      });
+
+      html += `<p><strong>Gesamt: ${summe.toFixed(2)} €</strong></p>`;
+      container.innerHTML = html;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>
