@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein T-Shirt Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>🖤 Urban Tees</h1>
+    <nav class="navbar">
+        <select id="currency-selector">
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+
+          <select id="language-selector">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+          </select>
+          
+          
+          <nav class="navbar">
+            <div class="nav-links">
+              <a href="kontakt.html">Kontakt</a>
+              <a href="rueckgabe.html">Rückgabe</a>
+              <a href="versand.html">Versand</a>
+              <a href="warenkorb.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+              <button id="toggle-theme" aria-label="Toggle Dark/Light Mode">🌙</button>
+            </div>
+          </nav>
+          
+      
+      
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Stylische T-Shirts. Kein Bullshit.</h2>
+      <p>Print-on-Demand. Direkt zu dir. Nachhaltig & edgy.</p>
+      <a href="#produkte"
+    </section>
+
+    <section id="produkte" class="produkte">
+        <h3>Unsere Bestseller</h3>
+<div class="produkt-grid">
+
+  <div class="produkt">
+    <img src="images/shirt1.png" alt="Dream Tee">
+    <h4>Dream Tee</h4>
+    <p class="beschreibung">„last night I had a dream about u”</p>
+    <p class="product-price" data-base-price="29.99">29.99 €</p>
+
+    <button class="btn-kaufen" data-name="Dream Tee" data-price="29.90" data-image="images/shirt1.png">Kaufen</button>
+
+  </div>
+
+  <div class="produkt">
+    <img src="images/shirt2.png" alt="wish u were here">
+    <h4>Wish u were her(e)</h4>
+    <p class="beschreibung">„Wish u were her(e)”</p>
+    <p class="product-price" data-base-price="28.99">28.99 €</p>
+
+    <button class="btn-kaufen" data-name="wish u were here" data-price="28,90" data-image="images/shirt2.png">Kaufen</button>
+  </div>
+
+      <div class="produkt-grid">
+        <div class="produkt">
+          <img src="images/shirt1.jpg" alt="Shirt 1" />
+          <h4>Dream Tee</h4>
+          <p>„last night I had a dream about u”</p>
+          <p class="product-price" data-base-price="29.90">29,90 €</p>
+          <button>Kaufen</button>
+        </div>
+        <!-- weitere Produkte hier -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Urban Tees. Alle Rechte vorbehalten.</p>
+    <section id="support">
+        <h2>Support</h2>
+        <p>Bei Fragen erreichst du uns unter support@meinshop.de</p>
+      </section>
+      
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
